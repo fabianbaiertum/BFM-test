@@ -14,6 +14,5 @@ The test can easily be run with your own data input for X, Y1 and Y2; you have t
 
 
 #### Remark
-For large n, the code needs to be adjusted, so that you don't run into GPU memory issues
-
-The provided csv files x, y1 and y2 were used to test that the implementation of the BFM test is correct.
+For large n, the code needs to be adjusted so that you don't run into GPU memory issues.
+The provided CSV files x, y1 and y2 were used to test that the implementation of the BFM test is correct.
