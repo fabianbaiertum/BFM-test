@@ -8,6 +8,9 @@ For the functions kern_k and MMD_stand, I used something similar to https://gith
 My code improved the performance of the provided R code using Numpy by ~60 times, using GPU, it improves by at least ~70 times compared to the Numpy code. 
 For the GPU version, you need to install the CUDA package from Nvidia and then install Cupy in your IDE.
 
+I also included my paper for the research internship at the Financial Mathematics Department at TUM.
+
+
 
 
 
