@@ -1,5 +1,4 @@
 import numpy as np
-#import torch
 from scipy.stats import norm
 from scipy.spatial.distance import cdist
 from math import sqrt
@@ -13,8 +12,7 @@ from matplotlib import pyplot as plt
 
 """
     For the functions kern_k and MMD_stand I'm using code similar to https://github.com/sshekhar17/PermFreeMMD/blob/main/src/utils.py#L76, I just excluded the diagonal elements.
-    For the other functions also the figure 1-4 data generating functions I'm using something similar to https://github.com/florianbrueck/MMD_tests_for_model_selection/blob/main/BFM-TEST.R.
-    The code for the plots is written by myself, without using the R code Professor Min provived since I thought my approach is easier.
+    For the other functions I'm using something similar to https://github.com/florianbrueck/MMD_tests_for_model_selection/blob/main/BFM-TEST.R, but extend it with parallization.
     All the references on which equation it represents is based on https://arxiv.org/abs/2305.07549 version 2 of Distribution free MMD tests for model selection with estimated parameters 
     by Florian Brueck, Jean-David Fermanian and Aleksey Min.
     
@@ -496,4 +494,5 @@ pow = -1 / np.array([2.5, 4.5, 6.5])
 epsilon = n ** pow
 
 #takes for n=10000 19 sec using numpy to simulate and do BFM test
+
 #takes for n=20000  over 10 min
