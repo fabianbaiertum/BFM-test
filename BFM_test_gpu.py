@@ -4,9 +4,9 @@ import numpy as np
 from tqdm import tqdm
 import time
 import pandas as pd
-path_y="C:\\Users\\Fabia\\Downloads\\y1.csv"
-path_x="C:\\Users\\Fabia\\Downloads\\x.csv"
-path_y2="C:\\Users\\Fabia\\Downloads\\y2.csv"
+#path_y="C:\\Users\\Fabia\\Downloads\\y1.csv"  #your csv file paths
+#path_x="C:\\Users\\Fabia\\Downloads\\x.csv"
+#path_y2="C:\\Users\\Fabia\\Downloads\\y2.csv"
 
 def kern_k(x, y=None, bw=1.0, amp=1.0):
     x = cp.asarray(x, dtype=cp.float32)
@@ -184,7 +184,7 @@ def BFM_test(d, n, epsilon, X_np, Y_np, Y2_np=None, bw=1.0, model_selection=Fals
         return [_run_test(float(eps)) for eps in epsilon]
 
 
-n,d,theta1 = 50000, 16, 16
+n,d,theta1 = 20000, 16, 16
 bw = np.sqrt(theta1 / 2)
 data_x=pd.read_csv(path_x,index_col=0).to_numpy()   #since R adds an additional first column
 data_y=pd.read_csv(path_y,index_col=0).to_numpy()
@@ -196,4 +196,5 @@ start_time=time.time()
 bfm=BFM_test(d,n,epsilon,X,Y,bw=bw)
 end_time=time.time()
 elapsed_time = end_time - start_time
+
 print(f"BFM took {elapsed_time:.6f} seconds.")
